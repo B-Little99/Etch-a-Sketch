@@ -9,7 +9,6 @@ function createGrid() {
 
 function createDiv() {
     let div = document.createElement("div");
-    div.innerText = "test"
     div.className = "gridCell";
     document.getElementById("canvasContainer").appendChild(div);    
 }
