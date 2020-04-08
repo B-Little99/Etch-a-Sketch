@@ -13,6 +13,15 @@ function createDiv() {
     document.getElementById("canvasContainer").appendChild(div);    
 }
 
+//This sets up the event listener when the window is loaded for each grid cell
+let gridCell = document.getElementsByClassName("gridCell");
 
+for (i = 0; i < gridCell.length; i++) {
+    gridCell[i].id = [i];
+    gridCell[i].addEventListener("mouseover", placeColour);
+}
 
-
+//Adding the colour as the user hovers over the various cell tiles.
+function placeColour(){
+    this.style.backgroundColor = colour;    
+}
